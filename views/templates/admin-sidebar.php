@@ -21,14 +21,14 @@
             </span>
         </a>
 
-        <a href="/admin/categorias" class="dashboard__enlace <?php echo pagina_actual('/categorias') ? 'dashboard__enlace--actual' : ''; ?> ">
+       <!-- <a href="/admin/categorias" class="dashboard__enlace <?php // echo pagina_actual('/categorias') ? 'dashboard__enlace--actual' : ''; ?> ">
             <i class="fa-solid fa-layer-group"></i>
             <span class="dashboard__menu-texto">
                 Categorías
             </span>
-        </a>
+        </a> -->
 
-        <a href="/admin/proovedores" class="dashboard__enlace <?php echo pagina_actual('/proovedores') ? 'dashboard__enlace--actual' : ''; ?> ">
+        <a href="/admin/proveedores" class="dashboard__enlace <?php echo pagina_actual('/proveedores') ? 'dashboard__enlace--actual' : ''; ?> ">
             <i class="fa-solid fa-truck-fast"></i>
             <span class="dashboard__menu-texto">
                 Proovedores
@@ -36,9 +36,16 @@
         </a>
 
         <a href="/admin/ventas" class="dashboard__enlace <?php echo pagina_actual('/ventas') ? 'dashboard__enlace--actual' : ''; ?> ">
-            <i class="fa-solid fa-store"></i>
+        <i class="fa-solid fa-shop"></i>
             <span class="dashboard__menu-texto">
                 Ventas
+            </span>
+        </a>
+
+        <a href="/admin/tiendas" class="dashboard__enlace <?php echo pagina_actual('/tiendas') ? 'dashboard__enlace--actual' : ''; ?> ">
+            <i class="fa-solid fa-store"></i>
+            <span class="dashboard__menu-texto">
+                Tienda
             </span>
         </a>
     </nav>
