@@ -40,7 +40,7 @@ class Tienda extends ActiveRecord {
             self::$alertas['error'][] = 'El Campo marca es obligatorio';
         } 
         if(!$this->precioMCinco) {
-            self::$alertas['error'][] = 'El Campo es Obligatorio';
+            self::$alertas['error'][] = 'Es Obligatorio';
         }
     
         return self::$alertas;
