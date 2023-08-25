@@ -55,7 +55,7 @@
 
         </table>
     <?php } else { ?>
-        <p class="text-center">No hay Proveedores Guardados.</p>
+        <p class="text-center">No hay Proveedores Registrados.</p>
     <?php } ?>
 </div>
 
