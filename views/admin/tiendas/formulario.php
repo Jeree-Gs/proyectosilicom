@@ -4,6 +4,7 @@
     <div class="formulario__campo">
         <label for="nombre" class="formulario__label">Nombre</label>
         <input 
+            oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/,'')" 
             type="text" 
             class="formulario__input"
             id="nombre"

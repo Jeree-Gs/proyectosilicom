@@ -931,4 +931,27 @@ h3 {
     display: inline;
   }
 }
+
+.listado-proveedores {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+.listado-proveedores__proveedor, .listado-proveedores__proveedor--seleccionado {
+  color: #f48a00;
+  border: 1px solid #f48a00;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.listado-proveedores__proveedor:hover, .listado-proveedores__proveedor--seleccionado:hover {
+  cursor: pointer;
+}
+.listado-proveedores__proveedor--seleccionado {
+  background-color: #f48a00;
+  color: #FFFFFF;
+}
 /*# sourceMappingURL=app.css.map */

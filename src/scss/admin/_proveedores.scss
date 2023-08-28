@@ -1,0 +1,25 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.listado-proveedores {
+    @include m.reset-lista;
+    @include m.grid(1, 1rem);
+
+    &__proveedor {
+        color: v.$naranja;
+        border: 1px solid v.$naranja;
+        padding: 1rem;
+        border-radius: 1rem;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &--seleccionado {
+            @extend .listado-proveedores__proveedor;
+            background-color: v.$naranja;
+            color: v.$blanco;
+        }
+    }
+}

@@ -9,6 +9,8 @@ use Controllers\CategoriasController;
 use Controllers\ClientesController;
 use Controllers\ProveedoresController;
 use Controllers\AlmacenController;
+use Controllers\APIProveedores;
+use Controllers\PaginasController;
 use Controllers\VentasController;
 use Controllers\TiendasController;
 
@@ -68,6 +70,17 @@ $router->post('/admin/tiendas/crear', [TiendasController::class, 'crear']);
 $router->get('/admin/tiendas/editar', [TiendasController::class, 'editar']);
 $router->post('/admin/tiendas/editar', [TiendasController::class, 'editar']);
 $router->post('/admin/tiendas/eliminar', [TiendasController::class, 'eliminar']);
+
+
+$router->get('/api/proveedores', [APIProveedores::class, 'index']);
+
+
+// Paginas públicas
+
+$router->get('/', [PaginasController::class, 'index']);
+$router->get('/conocenos', [PaginasController::class, 'conocenos']);
+$router->get('/contactos', [PaginasController::class, 'contactanos']);
+
 
 
 $router->comprobarRutas();

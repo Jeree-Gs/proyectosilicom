@@ -7,6 +7,19 @@
     </a>
 </div>
 
+<div class="formulario__campo">
+    <label for="proveedores" class="formulario__label">Proveedores</label>
+    <input 
+        type="text" 
+        class="formulario__input"
+        id="proveedores"
+        placeholder="Buscar Proveedores"
+    >
+    <ul id="listado-proveedores" class="listado-proveedores"></ul>
+
+    <input type="hidden" name="proveedor_id" value="">
+</div>
+
 <div class="dashboard__contenedor">
     <?php if(!empty($proveedores)) { ?>
         <table class="table">
