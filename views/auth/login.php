@@ -28,7 +28,7 @@
                 name="password"
             >
         </div>
-
+        <p>cambios desde local</p>
         <input type="submit" class="formulario__submit" value="Iniciar Sesión">
     </form>
 
