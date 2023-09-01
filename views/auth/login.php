@@ -28,11 +28,7 @@
                 name="password"
             >
         </div>
-<<<<<<< HEAD
-        <p>cambios desde local</p>
-=======
-    <p>cambios desde github</p>
->>>>>>> 30af06753d09efb166083cbbd469059f0a2c2941
+        
         <input type="submit" class="formulario__submit" value="Iniciar Sesión">
     </form>
 
