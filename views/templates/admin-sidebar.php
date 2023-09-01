@@ -7,7 +7,7 @@
             </span>
         </a>
 
-        <a href="/admin/clientes" class="dashboard__enlace <?php echo pagina_actual('/clientes') ? 'dashboard__enlace--actual' : ''; ?> ">
+        <a href="/admin/registrados" class="dashboard__enlace <?php echo pagina_actual('/registrados') ? 'dashboard__enlace--actual' : ''; ?> ">
             <i class="fa-solid fa-user dashboard__icono"></i>
             <span class="dashboard__menu-texto">
                 Clientes

@@ -6,11 +6,11 @@ use MVC\Router;
 use Controllers\AuthController;
 use Controllers\DashboardController;
 use Controllers\CategoriasController;
-use Controllers\ClientesController;
 use Controllers\ProveedoresController;
 use Controllers\AlmacenController;
 use Controllers\APIProveedores;
 use Controllers\PaginasController;
+use Controllers\RegistradosController;
 use Controllers\VentasController;
 use Controllers\TiendasController;
 
@@ -42,7 +42,7 @@ $router->get('/confirmar-cuenta', [AuthController::class, 'confirmar']);
 //AREA DE ADMINISTRACION
 $router->get('/admin/dashboard', [DashboardController::class, 'index']);
 
-$router->get('/admin/clientes', [ClientesController::class, 'index']);
+$router->get('/admin/registrados', [RegistradosController::class, 'index']);
 
 $router->get('/admin/almacen', [AlmacenController::class, 'index']);
 
