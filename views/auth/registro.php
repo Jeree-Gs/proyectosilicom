@@ -1,4 +1,4 @@
-<main class="auth">
+<main class="auth" id="miRegistro">
     <h2 class="auth__heading"> <?php echo $titulo; ?> </h2>
     <p class="auth__texto">Registrate en Silicom</p>
 
@@ -76,3 +76,16 @@
     </div>
 
 </main>
+
+<script>
+document.getElementById('registro').addEventListener('click', function(event) {
+  // Previene la acción predeterminada del enlace (navegar a la URL externa)
+  event.preventDefault();
+
+  // Realiza una acción específica, como desplazarse a un elemento con un atributo 'id'
+  var destino = document.getElementById('miRegistro');
+  if (destino) {
+    destino.scrollIntoView({ behavior: 'smooth' });
+  }
+});
+</script>
