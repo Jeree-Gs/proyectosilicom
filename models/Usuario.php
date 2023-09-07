@@ -4,11 +4,14 @@ namespace Model;
 
 class Usuario extends ActiveRecord {
     protected static $tabla = 'usuarios';
-    protected static $columnasDB = ['id', 'nombre', 'apellido', 'email', 'password', 'confirmado', 'token', 'admin'];
+    protected static $columnasDB = ['id', 'nombre', 'apellido', 'apellido2', 'direccion', 'telefono', 'email', 'password', 'confirmado', 'token', 'admin'];
 
     public $id;
     public $nombre;
     public $apellido;
+    public $apellido2;
+    public $direccion;
+    public $telefono;
     public $email;
     public $password;
     public $password2;
@@ -25,6 +28,9 @@ class Usuario extends ActiveRecord {
         $this->id = $args['id'] ?? null;
         $this->nombre = $args['nombre'] ?? '';
         $this->apellido = $args['apellido'] ?? '';
+        $this->apellido2 = $args['apellido2'] ?? '';
+        $this->direccion = $args['direccion'] ?? '';
+        $this->telefono = $args['telefono'] ?? '';
         $this->email = $args['email'] ?? '';
         $this->password = $args['password'] ?? '';
         $this->password2 = $args['password2'] ?? '';
@@ -56,6 +62,12 @@ class Usuario extends ActiveRecord {
         if(!$this->apellido) {
             self::$alertas['error'][] = 'El Apellido es Obligatorio';
         }
+        if(!$this->direccion) {
+            self::$alertas['error'][] = 'La direccion es Obligatorio';
+        }
+        if(!$this->telefono) {
+            self::$alertas['error'][] = 'El Teléfono es Obligatorio';
+        }
         if(!$this->email) {
             self::$alertas['error'][] = 'El Email es Obligatorio';
         }
@@ -67,7 +79,7 @@ class Usuario extends ActiveRecord {
         }
         if($this->password !== $this->password2) {
             self::$alertas['error'][] = 'Los password son diferentes';
-        }
+        } //repetir pass
         return self::$alertas;
     }
 

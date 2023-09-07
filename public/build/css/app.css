@@ -424,12 +424,12 @@ h3 {
   font-size: 1.8rem;
   color: rgba(26, 27, 21, 0.8);
 }
-.formulario__input {
+.formulario__input, .formulario__select {
   padding: 1rem;
   border: 1px solid #94b3d1;
   border-radius: 0.5rem;
 }
-.formulario__input--file {
+.formulario__input--file, .formulario__select--file {
   border: none;
 }
 .formulario__texto {

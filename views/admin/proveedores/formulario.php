@@ -14,18 +14,6 @@
         >
     </div>
 
- <!--   <div class="formulario__campo">
-        <label for="direccion" class="formulario__label">Dirección</label>
-        <input 
-            type="text" 
-            class="formulario__input"
-            id="direccion"
-            name="direccion"
-            placeholder="Dirección"
-            value="<?php echo $proveedor->direccion ?? ''; ?>"
-        >
-    </div> -->
-
     <div class="formulario__campo">
         <label for="telefono" class="formulario__label">Teléfono</label>
         <input 

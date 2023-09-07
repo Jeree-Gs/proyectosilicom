@@ -10,7 +10,7 @@
          <div class="formulario__campo">
             <label for="nombre" class="formulario__label">Nombre</label>
             <input 
-                oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/,'')" 
+                oninput="this.value = this.value.replace(/[^a-zA-Z]/,'')" 
                 type="text" 
                 class="formulario__input"
                 placeholder="Tu Nombre"
@@ -21,15 +21,54 @@
         </div>
 
         <div class="formulario__campo">
-            <label for="apellido" class="formulario__label">Apellido</label>
+            <label for="apellido" class="formulario__label">Primer Apellido</label>
             <input 
-                oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/,'')" 
+                oninput="this.value = this.value.replace(/[^a-zA-Z]/,'')" 
                 type="text" 
                 class="formulario__input"
                 placeholder="Tu Apellido"
                 id="apellido"
                 name="apellido"
                 value="<?php echo $usuario->apellido; ?>"
+            >
+        </div>
+
+        <div class="formulario__campo">
+            <label for="apellido2" class="formulario__label">Segundo Apellido (opcional)</label>
+            <input 
+                oninput="this.value = this.value.replace(/[^a-zA-Z]/,'')" 
+                type="text" 
+                class="formulario__input"
+                placeholder="Tu Segundo Apellido"
+                id="apellido2"
+                name="apellido2"
+                value="<?php echo $usuario->apellido2; ?>"
+            >
+        </div>
+
+        <div class="formulario__campo">
+            <label for="direccion" class="formulario__label">Dirección</label>
+            <input 
+                oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/,'')" 
+                type="text" 
+                class="formulario__input"
+                placeholder="Tu Dirección Ej. (Av D'Orbigny N 1629 Entre Almagro y Pizarro)"
+                id="direccion"
+                name="direccion"
+                value="<?php echo $usuario->direccion; ?>"
+            >
+        </div>
+
+        <div class="formulario__campo">
+            <label for="telefono" class="formulario__label">Teléfono</label>
+            <input 
+                oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/,'')" 
+                type="text" 
+                class="formulario__input"
+                placeholder="Tu Número de Teléfono"
+                id="telefono"
+                name="telefono"
+                value="<?php echo $usuario->telefono; ?>"
             >
         </div>
 

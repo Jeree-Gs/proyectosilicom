@@ -22,6 +22,17 @@
             >
         </div>
 
+        <div class="formulario__campo">
+            <label for="password2" class="formulario__label">Repetir Contraseña</label>
+            <input 
+                type="password" 
+                class="formulario__input"
+                placeholder="Repetir Contraseña"
+                id="password2"
+                name="password2"
+            >
+        </div>
+
         <input type="submit" class="formulario__submit" value="Guardar Contraseña">
     </form>
     <?php } ?>
