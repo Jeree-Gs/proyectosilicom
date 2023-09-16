@@ -36,3 +36,4 @@ class Proveedor extends ActiveRecord {
         return self::$alertas;
     }
 }
+

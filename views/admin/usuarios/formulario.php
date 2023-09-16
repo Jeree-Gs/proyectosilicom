@@ -4,7 +4,7 @@
     <div class="formulario__campo">
         <label for="nombre" class="formulario__label">Nombre</label>
         <input 
-            oninput="this.value = this.value.replace(/[^a-zA-Z]/,'')" 
+            oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚ\s/]/g, '')" 
             type="text" 
             class="formulario__input"
             id="nombre"
@@ -17,7 +17,7 @@
     <div class="formulario__campo">
         <label for="apellido" class="formulario__label">Apellido</label>
         <input 
-            oninput="this.value = this.value.replace(/[^a-zA-Z]/,'')" 
+            oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚ\s/]/g, '')"
             type="text" 
             class="formulario__input"
             id="apellido"
@@ -28,9 +28,22 @@
     </div>
 
     <div class="formulario__campo">
+        <label for="apellido" class="formulario__label">Segundo Apellido</label>
+        <input 
+            oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚ\s/]/g, '')"
+            type="text" 
+            class="formulario__input"
+            id="apellido"
+            name="apellido"
+            placeholder="Nombre del Producto"
+            value="<?php echo $usuario->apellido2 ?? ''; ?>"
+        >
+    </div>
+
+    <div class="formulario__campo">
         <label for="direccion" class="formulario__label">Dirección</label>
         <input 
-            oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/,'')" 
+            oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚ\s/]/g, '')"
             type="text" 
             class="formulario__input"
             id="direccion"
@@ -64,7 +77,7 @@
         >
             <option value="">- Seleccionar -</option>
             <option value="1" <?php if (isset($usuario->admin) && $usuario->admin == 1); ?>>Admin</option>
-            <option value="0" <?php if (isset($usuario->admin) && $usuario->admin == 0); ?>>Usuario</option>
+            <option value="0" <?php if (isset($usuario->admin) && $usuario->admin == 0); ?>>Cliente</option>
         </select>
 
     </div>

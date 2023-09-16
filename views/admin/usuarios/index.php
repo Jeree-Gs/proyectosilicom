@@ -22,7 +22,7 @@
                     <th scope="col" class="table__th">Apellido</th>
                     <th scope="col" class="table__th">Teléfono</th>
                     <th scope="col" class="table__th">Email</th>
-                    <th scope="col" class="table__th">Admin</th>
+                    <th scope="col" class="table__th">Rol</th>
                     <th scope="col" class="table__th"></th>
                 </tr>
             </thead>
