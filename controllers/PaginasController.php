@@ -8,7 +8,6 @@ use Model\Tienda;
 class PaginasController {
     public static function index(Router $router) {
 
-
         // Obtener el total de cada bloque
         $tiendas_total = Tienda::total();
 
@@ -34,5 +33,10 @@ class PaginasController {
         $router->render('paginas/contactanos', [
             'titulo' => 'Contactanos'
         ]);
+    }
+
+    public static function tienda( Router $router ) {
+
+        
     }
 }

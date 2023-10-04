@@ -28,13 +28,13 @@
     </div>
 
     <div class="formulario__campo">
-        <label for="apellido" class="formulario__label">Segundo Apellido</label>
+        <label for="apellido2" class="formulario__label">Segundo Apellido</label>
         <input 
             oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚ\s/]/g, '')"
             type="text" 
             class="formulario__input"
-            id="apellido"
-            name="apellido"
+            id="apellido2"
+            name="apellido2"
             placeholder="Nombre del Producto"
             value="<?php echo $usuario->apellido2 ?? ''; ?>"
         >

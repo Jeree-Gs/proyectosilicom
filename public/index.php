@@ -7,12 +7,13 @@ use Controllers\AuthController;
 use Controllers\DashboardController;
 use Controllers\CategoriasController;
 use Controllers\ProveedoresController;
-use Controllers\AlmacenController;
+use Controllers\AlmacenesController;
 use Controllers\APIProveedores;
 use Controllers\PaginasController;
 use Controllers\UsuariosController;
 use Controllers\VentasController;
 use Controllers\TiendasController;
+use Controllers\ClientesController;
 
 $router = new Router();
 
@@ -49,7 +50,12 @@ $router->get('/admin/usuarios/editar', [UsuariosController::class, 'editar']);
 $router->post('/admin/usuarios/editar', [UsuariosController::class, 'editar']);
 $router->post('/admin/usuarios/eliminar', [UsuariosController::class, 'eliminar']);
 
-$router->get('/admin/almacen', [AlmacenController::class, 'index']);
+$router->get('/admin/almacenes', [AlmacenesController::class, 'index']);
+$router->get('/admin/almacenes/crear', [AlmacenesController::class, 'crear']);
+$router->post('/admin/almacenes/crear', [AlmacenesController::class, 'crear']);
+$router->get('/admin/almacenes/editar', [AlmacenesController::class, 'editar']);
+$router->post('/admin/almacenes/editar', [AlmacenesController::class, 'editar']);
+$router->post('/admin/almacenes/eliminar', [AlmacenesController::class, 'eliminar']);
 
 $router->get('/admin/categorias', [CategoriasController::class, 'index']);
 
@@ -76,6 +82,13 @@ $router->get('/admin/tiendas/editar', [TiendasController::class, 'editar']);
 $router->post('/admin/tiendas/editar', [TiendasController::class, 'editar']);
 $router->post('/admin/tiendas/eliminar', [TiendasController::class, 'eliminar']);
 
+
+$router->get('/admin/clientes', [ClientesController::class, 'index']);
+$router->get('/admin/clientes/crear', [ClientesController::class, 'crear']);
+$router->post('/admin/clientes/crear', [ClientesController::class, 'crear']);
+$router->get('/admin/clientes/editar', [ClientesController::class, 'editar']);
+$router->post('/admin/clientes/editar', [ClientesController::class, 'editar']);
+$router->post('/admin/clientes/eliminar', [ClientesController::class, 'eliminar']);
 
 $router->get('/api/proveedores', [APIProveedores::class, 'index']);
 

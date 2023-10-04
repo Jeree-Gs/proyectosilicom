@@ -58,9 +58,7 @@
                 <source srcset="<?php echo $_ENV['HOST'] . '/img/tiendas/' . $tienda->imagen; ?>.png" type="png">
                 <img src="<?php echo $_ENV['HOST'] . '/img/tiendas/' . $tienda->imagen; ?>.png" alt="Imagen del Producto">
             </picture>
-            
         </div>
-
     <?php } ?>
 
 </fieldset>
@@ -83,6 +81,22 @@
         >
     </div>
 </fieldset> 
+    
+<div class="formulario__campo">
+    <fieldset class="formulario__fieldset">
+        <select 
+            id="miComboBox" 
+            name="marca" 
+            class="formulario__select"
+            >
+        <option value="IMOU">IMOU</option>
+        <option value="DAHUA">DAHUA</option>
+        </select>
+
+        <input type="text" id="nuevoValor" class="formulario__input">
+        <button class="formulario__submit" onclick="agregarValor()">Agregar</button>
+    </fieldset>
+</div>
 
 <div class="formulario__campo" >
         <label for="precioMCuatro" class="formulario__label" type="hidden"></label>

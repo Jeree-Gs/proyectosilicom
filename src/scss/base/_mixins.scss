@@ -6,6 +6,11 @@
         @content;
     }
 }
+@mixin xl_telefono {
+    @media (min-width: v.$xl_telefono) {
+        @content;
+    }
+}
 @mixin tablet {
     @media (min-width: v.$tablet) {
         @content;
@@ -43,7 +48,7 @@
 
 @mixin grid($columnas, $espaciado ) {
     display: grid;
-    gap: $espaciado;
+    gap: 2rem;
     grid-template-columns: repeat($columnas, 1fr);
 }
 
@@ -140,7 +145,7 @@
 @mixin enlace {
     all: unset; //elimina estilos por defecto
     color: v.$blanco;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: v.$bold;
     background-color: transparent;
@@ -181,7 +186,7 @@
 
 @mixin card {
     border: 1px solid lighten(v.$gris, 10);
-    padding: 3rem;
+    padding: 2rem;
 
     &__nombre {
         font-weight: v.$black;

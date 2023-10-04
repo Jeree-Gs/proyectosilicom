@@ -17,7 +17,7 @@
         padding: 5rem 0;
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 2rem;
         @include m.tablet {
             justify-content: flex-end;
         }
@@ -28,14 +28,14 @@
     }
 
     &__contenido {
-        padding-top: 10rem;
+        padding-top: 6rem;
         @include m.tablet {
             padding-top: 5rem;
         }
     }
 
     &__logo {
-        @include m.texto-fluido(2rem, 9rem);
+        @include m.texto-fluido(6rem, 9rem);
         @include m.texto-degradado(v.$naranja, v.$secundario);
         text-align: center;
         @include m.tablet {
@@ -45,7 +45,7 @@
     }
 
     &__texto {
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: v.$bold;
         color: v.$blanco;
         margin: 2rem 0;
