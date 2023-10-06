@@ -73,6 +73,8 @@ $router->post('/admin/ventas/crear', [VentasController::class, 'crear']);
 $router->get('/admin/ventas/editar', [VentasController::class, 'editar']);
 $router->post('/admin/ventas/editar', [VentasController::class, 'editar']);
 $router->post('/admin/ventas/eliminar', [VentasController::class, 'eliminar']);
+$router->get('/admin/ventas/registrar', [VentasController::class, 'registrar']);
+$router->post('/admin/ventas/registrar', [VentasController::class, 'registrar']);
 
 
 $router->get('/admin/tiendas', [TiendasController::class, 'index']);

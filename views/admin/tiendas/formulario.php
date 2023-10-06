@@ -82,7 +82,7 @@
     </div>
 </fieldset> 
     
-<div class="formulario__campo">
+<!-- <div class="formulario__campo">
     <fieldset class="formulario__fieldset">
         <select 
             id="miComboBox" 
@@ -96,7 +96,7 @@
         <input type="text" id="nuevoValor" class="formulario__input">
         <button class="formulario__submit" onclick="agregarValor()">Agregar</button>
     </fieldset>
-</div>
+</div> -->
 
 <div class="formulario__campo" >
         <label for="precioMCuatro" class="formulario__label" type="hidden"></label>
