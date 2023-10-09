@@ -2,15 +2,27 @@
     <legend class="formulario__legend">Información del Producto</legend>
 
     <div class="formulario__campo">
+        <label for="codigoBarra" class="formulario__label">Codigo</label>
+        <input 
+            type="number" 
+            class="formulario__input"
+            id="codigoBarra"
+            name="codigoBarra"
+            placeholder="Código de Barra del Producto"
+            value="<?php echo $almacen->codigoBarra ?? ''; ?>"
+        >
+    </div>
+
+    <div class="formulario__campo">
         <label for="nombre" class="formulario__label">Nombre</label>
         <input 
-            oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/,'')" 
+            oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/,' ')" 
             type="text" 
             class="formulario__input"
             id="nombre"
             name="nombre"
             placeholder="Nombre del Producto"
-            value="<?php echo $venta->nombre ?? ''; ?>"
+            value="<?php echo $almacen->nombre ?? ''; ?>"
         >
     </div>
 
@@ -22,7 +34,7 @@
             id="detalles"
             name="detalles"
             placeholder="Detalle del Producto"
-            value="<?php echo $venta->detalles ?? ''; ?>"
+            value="<?php echo $almacen->detalles ?? ''; ?>"
         >
     </div>
 
@@ -34,7 +46,7 @@
             id="precioPublico"
             name="precioPublico"
             placeholder="Precio publico del Producto"
-            value="<?php echo $venta->precioPublico ?? ''; ?>"
+            value="<?php echo $almacen->precioPublico ?? ''; ?>"
         >
     </div>
 
@@ -46,7 +58,7 @@
             id="precioMUno"
             name="precioMUno"
             placeholder="Precio mayor 1 del Producto"
-            value="<?php echo $venta->precioMUno ?? ''; ?>"
+            value="<?php echo $almacen->precioMUno ?? ''; ?>"
         >
     </div>
 
@@ -58,7 +70,7 @@
             id="precioMDos"
             name="precioMDos"
             placeholder="Precio mayor 2 del Producto"
-            value="<?php echo $venta->precioMDos ?? ''; ?>"
+            value="<?php echo $almacen->precioMDos ?? ''; ?>"
         >
     </div>
 
@@ -70,7 +82,7 @@
             id="precioMTres"
             name="precioMTres"
             placeholder="Precio mayor 3 del Producto"
-            value="<?php echo $venta->precioMTres ?? ''; ?>"
+            value="<?php echo $almacen->precioMTres ?? ''; ?>"
         >
     </div>
 
@@ -82,7 +94,7 @@
             id="precioMCuatro"
             name="precioMCuatro"
             placeholder="Precio mayor 4 del Producto"
-            value="<?php echo $venta->precioMCuatro ?? ''; ?>"
+            value="<?php echo $almacen->precioMCuatro ?? ''; ?>"
         >
     </div>
 
@@ -97,7 +109,7 @@
         >
     </div> 
 
-    <?php if(isset($venta->imagen_actual)) { ?>
+    <?php if(isset($almacen->imagen_actual)) { ?>
         <p class="formulario__texto">Imagen Actual:</p>
         <div class="formulario__imagen">
             <picture>
@@ -126,7 +138,7 @@
         >
 
         <div id="tags" class="formulario__listado"></div>
-        <input type="hidden" name="tags" value="<?php echo $venta->tags ?? ''; ?>"
+        <input type="hidden" name="tags" value="<?php echo $almacen->tags ?? ''; ?>"
         >
     </div>
 </fieldset> 
@@ -139,6 +151,6 @@
             id="precioMCinco"
             name="precioMCinco"
             placeholder="Precio mayor 4 del Producto"
-            value="<?php echo $venta->precioMCinco ?? ''; ?>"
+            value="<?php echo $almacen->precioMCinco ?? ''; ?>"
         >
     </div>

@@ -12,6 +12,7 @@
         <table class="table">
             <thead class="table__thead">
                 <tr>
+                    <th scope="col" class="table__th">Código</th>
                     <th scope="col" class="table__th">Nombre</th>
                     <th scope="col" class="table__th">Detalles</th>
                     <th scope="col" class="table__th">Precio Público</th>
@@ -26,6 +27,9 @@
             <tbody class="table__tbody">
                 <?php foreach($almacenes as $almacen) { ?>
                     <tr class="table__tr">
+                        <td class="table__td">
+                            <?php echo $almacen->codigoBarra; ?>
+                        </td>
                         <td class="table__td">
                             <?php echo $almacen->nombre; ?>
                         </td>
@@ -49,7 +53,7 @@
                         </td>
 
                         <td class="table__td--acciones">
-                            <a class="table__accion table__accion--editar" href="/admin/almacenes/editar?id=<?php echo $venta->id; ?>">
+                            <a class="table__accion table__accion--editar" href="/admin/almacenes/editar?id=<?php echo $almacen->id; ?>">
                                 <i class="fa-solid fa-pen-to-square"></i>
                                 Editar
                             </a>

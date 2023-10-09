@@ -4,9 +4,10 @@ namespace Model;
 
 class Almacen extends ActiveRecord {
     protected static $tabla = 'productos';
-    protected static $columnasDB = ['id', 'nombre', 'detalles', 'precioPublico', 'precioMUno', 'precioMDos', 'precioMTres', 'precioMCuatro', 'imagen', 'tags', 'precioMCinco' ];
+    protected static $columnasDB = ['id', 'codigoBarra', 'nombre', 'detalles', 'precioPublico', 'precioMUno', 'precioMDos', 'precioMTres', 'precioMCuatro', 'imagen', 'tags', 'precioMCinco' ];
 
     public $id;
+    public $codigoBarra;
     public $nombre;
     public $detalles;
     public $precioPublico;
@@ -22,6 +23,7 @@ class Almacen extends ActiveRecord {
     public function __construct($args = [])
     {
         $this->id = $args['id'] ?? null;
+        $this->codigoBarra = $args['codigoBarra'] ?? '';
         $this->nombre = $args['nombre'] ?? '';
         $this->detalles = $args['detalles'] ?? '';
         $this->precioPublico = $args['precioPublico'] ?? '';
@@ -36,6 +38,9 @@ class Almacen extends ActiveRecord {
     }
 
     public function validar() {
+        if(!$this->codigoBarra) {
+            self::$alertas['error'][] = 'El Nombre es Obligatorio';
+        }
         if(!$this->nombre) {
             self::$alertas['error'][] = 'El Nombre es Obligatorio';
         }

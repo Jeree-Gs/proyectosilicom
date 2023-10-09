@@ -6,6 +6,7 @@ use Classes\Paginacion;
 use Model\Tienda;
 use MVC\Router;
 use Intervention\Image\ImageManagerStatic as Image;
+use Model\Categoria;
 
 class TiendasController {
 
@@ -47,6 +48,8 @@ class TiendasController {
 
         $alertas = [];
         $tienda = new Tienda;
+
+        $categorias = Categoria::all();
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
             if(!is_admin()) {
@@ -96,7 +99,8 @@ class TiendasController {
         $router->render('admin/tiendas/crear', [
             'titulo' => 'Registrar Producto a la Tienda', 
             'alertas' => $alertas,
-            'tienda' => $tienda
+            'tienda' => $tienda,
+            'categorias' => $categorias
         ]);
     }
 

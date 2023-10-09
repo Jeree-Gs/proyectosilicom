@@ -61,6 +61,20 @@
         </div>
     <?php } ?>
 
+    <div class="formulario__campo">
+        <label for="categoria" class="formulario__label">Categoría</label>
+        <select 
+            class="formulario__select" 
+            name="categoria_id" 
+            id="categoria"
+            >
+            <option value="">- Seleccionar -</option>
+            <?php foreach($categorias as $categoria) { ?>
+                <option value="<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></option>
+            <?php } ?>
+        </select>
+    </div>
+
 </fieldset>
 
 
