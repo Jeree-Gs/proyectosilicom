@@ -129,3 +129,65 @@
         @include m.contenedor-md
     }
 }
+
+
+.cajas__dashboard {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 20px;
+}
+
+.boton {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    width: 35rem; /* Nuevo: Ancho de 4 rem */
+    height: 20rem; /* Nuevo: Altura de 4 rem */
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 19rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.boton:hover {
+    background-color: #555;
+}
+
+.boton:nth-child(1) {
+    background-color: #3498db;
+    background-image: linear-gradient(to right, #3498db, #6dd5fa);
+}
+
+.boton:nth-child(2) {
+    background-color: #e74c3c;
+    background-image: linear-gradient(to right, #e74c3c, #ff7e5f);
+}
+
+.boton:nth-child(3) {
+    background-color: #2ecc71;
+    background-image: linear-gradient(to right, #2ecc71, #59e380);
+}
+
+.boton:nth-child(4) {
+    background-color: #f39c12;
+    background-image: linear-gradient(to right, #f39c12, #ffc952);
+}
+
+.boton:nth-child(5) {
+    background-color: #9b59b6;
+    background-image: linear-gradient(to right, #9b59b6, #d8a9f2);
+}
+
+.boton:nth-child(6) {
+    background-color: #1abc9c;
+    background-image: linear-gradient(to right, #1abc9c, #48f3d7);
+}

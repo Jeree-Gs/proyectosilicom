@@ -14,6 +14,7 @@ use Controllers\UsuariosController;
 use Controllers\VentasController;
 use Controllers\TiendasController;
 use Controllers\ClientesController;
+use Controllers\UsersController;
 
 $router = new Router();
 
@@ -100,6 +101,10 @@ $router->get('/api/proveedores', [APIProveedores::class, 'index']);
 $router->get('/', [PaginasController::class, 'index']);
 $router->get('/conocenos', [PaginasController::class, 'conocenos']);
 $router->get('/contactos', [PaginasController::class, 'contactanos']);
+
+
+
+$router->get('/usuarios/nuestrosProductos', [UsersController::class, 'nuestrosProductos']);
 
 
 

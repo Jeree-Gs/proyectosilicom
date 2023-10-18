@@ -24,8 +24,8 @@
         </a>
         <nav class="navegacion">
             <a href="/categorias" class="navegacion__enlace">Categorías</a>
-            <a href="/conocenos" class="navegacion__enlace">Conocenos</a>
-            <a href="/contactos" class="navegacion__enlace">Contactos</a>
+            <a href="/conocenos" class="navegacion__enlace">Conócenos</a>
+            <a href="/contactos" class="navegacion__enlace">Contáctanos</a>
         </nav>
     </div>
 </div>

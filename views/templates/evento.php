@@ -1,4 +1,4 @@
-<div class="evento  swiper-slide">
+<div class="evento  swiper-slide speaker">
     <div class="">
             <picture>
                 <source srcset="img/tiendas/<?php echo $tienda->imagen; ?>.webp" type="image/webp">

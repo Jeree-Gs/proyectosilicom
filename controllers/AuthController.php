@@ -39,7 +39,7 @@ class AuthController {
                         if($usuario->admin) {
                             header('Location: /admin/dashboard');
                         } else { 
-                            header('Location: /finalizar-registro'); //Si solo es usuario. '0'
+                            header('Location: /usuarios/nuestrosProductos'); //Si solo es usuario. '0'
                         }
 
                     } else {

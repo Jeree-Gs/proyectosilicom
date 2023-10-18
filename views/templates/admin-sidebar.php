@@ -21,12 +21,6 @@
                 </span>
         </a>
 
-       <!-- <a href="/admin/categorias" class="dashboard__enlace <?php // echo pagina_actual('/categorias') ? 'dashboard__enlace--actual' : ''; ?> ">
-            <i class="fa-solid fa-layer-group"></i>
-            <span class="dashboard__menu-texto">
-                Categorías
-            </span>
-        </a> -->
 
         <a href="/admin/proveedores" class="dashboard__enlace <?php echo pagina_actual('/proveedores') ? 'dashboard__enlace--actual' : ''; ?> ">
             <i class="fa-solid fa-truck-fast"></i>

@@ -7,14 +7,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
-    text-align: center;
-}
 
-label {
-    display: block;
-    margin-bottom: 5px;
-}
 
 input[type="text"], input[type="date"] {
     width: 100%;
@@ -80,7 +73,7 @@ button {
     color: #555;
   }
 
-  input {
+  .input-venta {
     width: 100%;
     padding: 10px;
     font-size: 14px;

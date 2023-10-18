@@ -4,14 +4,15 @@ namespace Model;
 
 class Cliente extends ActiveRecord {
     protected static $tabla = 'clientes';
-    protected static $columnasDB = ['id', 'nit', 'nombre', 'apellido', 'segundoApellido', 'celular' ];
+    protected static $columnasDB = ['id', 'nit', 'nombre', 'apellido','telefono', 'segundoApellido', 'precioMC'];
 
     public $id;
     public $nit;
     public $nombre;
     public $apellido;
+    public $telefono;
     public $segundoApellido;
-    public $celular;
+    public $precioMC;
     
     
     public function __construct($args = [])
@@ -20,8 +21,9 @@ class Cliente extends ActiveRecord {
         $this->nit = $args['nit'] ?? '';
         $this->nombre = $args['nombre'] ?? '';
         $this->apellido = $args['apellido'] ?? '';
+        $this->telefono = $args['telefono'] ?? '';
         $this->segundoApellido = $args['segundoApellido'] ?? '';
-        $this->celular = $args['celular'] ?? '';
+        $this->precioMC = $args['precioMC'] ?? '';
 
     }
 
@@ -38,12 +40,16 @@ class Cliente extends ActiveRecord {
         if(!$this->apellido) {
             self::$alertas['error'][] = 'El Campo Ciudad es Obligatorio';
         }
+        if(!$this->telefono) {
+            self::$alertas['error'][] = 'El Campo Ciudad es Obligatorio';
+        }
         if(!$this->segundoApellido) {
             self::$alertas['error'][] = 'El Campo Ciudad es Obligatorio';
         }
-        if(!$this->celular) {
+        if(!$this->precioMC) {
             self::$alertas['error'][] = 'El Campo Ciudad es Obligatorio';
         }
+        
     
         return self::$alertas;
     }

@@ -33,6 +33,10 @@ class TiendasController {
             header('Location: /login');
         }
        
+        foreach($tiendas as $tienda) {
+            $tienda->categoria = Categoria::find($tienda->categoria_id);
+        }
+
         $router->render('admin/tiendas/index', [
             'titulo' => 'Tienda En Línea',
             'tiendas' => $tiendas,
@@ -176,9 +180,11 @@ class TiendasController {
             }
 
         }
+        $categorias = Categoria::all('ASC');
 
         $router->render('admin/tiendas/editar', [
             'titulo' => 'Actualizar Producto', 
+            'categorias' => $categorias,
             'alertas' => $alertas,
             'tienda' => $tienda
         ]);

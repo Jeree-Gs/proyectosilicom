@@ -11,19 +11,19 @@
       <div class="row">
         <div>
           <label for="codigoBarras">Código de Barras:</label>
-          <input type="text" id="codigoBarras" name="codigoBarras" required>
+          <input class="input-venta" type="text" id="codigoBarras" name="codigoBarras" required>
         </div>
         <div>
           <label for="producto">Producto:</label>
-          <input disabled id="producto" name="producto" value="" placeholder="Nombre del Producto">
+          <input class="input-venta" disabled id="producto" name="producto" value="" placeholder="Nombre del Producto">
         </div>
         <div>
           <label for="precio">Precio: (Bs)</label>
-          <input disabled id="precio" name="precio" value="" placeholder="00.00 Bs.">
+          <input class="input-venta" disabled id="precio" name="precio" value="" placeholder="00.00 Bs.">
         </div>
         <div>
             <label for="fecha">Fecha Actual:</label>
-            <input type="date" id="fecha" value="<?php echo date('Y-m-d'); ?>" disabled>
+            <input class="input-venta" type="date" id="fecha" value="<?php echo date('Y-m-d'); ?>" disabled>
         </div>
       </div>
 
@@ -44,7 +44,7 @@
         <div class="two-columns">
         <div>
           <label for="datosCliente">Datos del Cliente:</label>
-          <input type="text" id="datosCliente" name="datosCliente" placeholder="Nit" required>
+          <input class="input-venta" type="text" id="datosCliente" name="datosCliente" placeholder="Nit" required>
         </div>
         <div class="dashboard__contenedor-boton">
             <a class="dashboard__boton" href="/admin/clientes/crear">
@@ -54,7 +54,7 @@
         </div>
         <div>
           <label for="totalPagar">Total a pagar: (Bs)</label>
-          <input disabled id="totalPagar" name="totalPagar" value="">
+          <input class="input-venta" disabled id="totalPagar" name="totalPagar" value="">
         </div>
       </div>
 

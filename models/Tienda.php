@@ -4,7 +4,7 @@ namespace Model;
 
 class Tienda extends ActiveRecord {
     protected static $tabla = 'tiendas';
-    protected static $columnasDB = ['id', 'nombre', 'detalles', 'precio', 'imagen', 'tags', 'precioMCinco' ];
+    protected static $columnasDB = ['id', 'nombre', 'detalles', 'precio', 'imagen', 'tags', 'categoria_id', 'precioMCinco' ];
 
     public $id;
     public $nombre;
@@ -12,7 +12,9 @@ class Tienda extends ActiveRecord {
     public $precio;
     public $imagen;
     public $tags;
+    public $categoria_id;
     public $precioMCinco;
+    
     
 
     public function __construct($args = [])
@@ -22,6 +24,7 @@ class Tienda extends ActiveRecord {
         $this->detalles = $args['detalles'] ?? '';
         $this->imagen = $args['imagen'] ?? '';
         $this->tags = $args['tags'] ?? ''; 
+        $this->categoria_id = $args['categoria_id'] ?? ''; 
         $this->precioMCinco = $args['precioMCinco'] ?? ''; 
 
     }
@@ -39,6 +42,9 @@ class Tienda extends ActiveRecord {
         if(!$this->tags) {
             self::$alertas['error'][] = 'El Campo marca es obligatorio';
         } 
+        if(!$this->categoria_id  || !filter_var($this->categoria_id, FILTER_VALIDATE_INT)) {
+            self::$alertas['error'][] = 'Elige una Categoría';
+        }
         if(!$this->precioMCinco) {
             self::$alertas['error'][] = 'Es Obligatorio';
         }

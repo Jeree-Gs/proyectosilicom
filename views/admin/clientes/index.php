@@ -33,7 +33,7 @@
                             <?php echo $cliente->apellido . " " . $cliente->segundoApellido; ?>
                         </td>
                         <td class="table__td">
-                            <?php echo $cliente->celular; ?>
+                            <?php echo $cliente->telefono; ?>
                         </td>
                         
                         

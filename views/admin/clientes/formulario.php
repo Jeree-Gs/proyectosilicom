@@ -52,16 +52,16 @@
         >
     </div>
 
- <!--   <div class="formulario__campo">
-        <label for="celular" class="formulario__label">Teléfono</label>
+    <div class="formulario__campo">
+        <label for="telefono" class="formulario__label">Precio Público</label>
         <input 
-            type="text" 
+            type="number" 
             class="formulario__input"
-            id="celular"
-            name="celular"
+            id="telefono"
+            name="telefono"
             placeholder="Precio publico del Producto"
-            value="<?php echo $cliente->celular ?? ''; ?>"
+            value="<?php echo $cliente->telefono ?? ''; ?>"
         >
-    </div> -->
+    </div>
 
    
