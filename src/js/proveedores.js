@@ -33,10 +33,10 @@
         }
 
         async function obtenerProveedor(id) {
-           const url = `/api/proveedores?id=${id}`;
-           const respuesta = await fetch(url);
-           const resultado = await respuesta.json();
-           formatearProveedores(resultado)
+            const url = `/api/proveedores?id=${id}`;
+            const respuesta = await fetch(url);
+            const resultado = await respuesta.json();
+            formatearProveedores(resultado);
         }
 
         function formatearProveedores(arrayProveedores = []) {

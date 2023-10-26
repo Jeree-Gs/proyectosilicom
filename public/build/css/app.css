@@ -1338,6 +1338,30 @@ h3 {
     width: auto;
   }
 }
+.dashboard__boton--verde {
+  background-color: #00a33d;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.dashboard__boton--verde:hover {
+  background-color: black;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .dashboard__boton--verde {
+    width: auto;
+  }
+}
 .dashboard__contenedor, .dashboard__formulario {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   background-color: #FFFFFF;

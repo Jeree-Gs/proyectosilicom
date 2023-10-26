@@ -5,6 +5,7 @@ namespace Controllers;
 use Classes\Paginacion;
 use Model\Venta;
 use MVC\Router;
+use Model\Cliente;
 use Intervention\Image\ImageManagerStatic as Image;
 
 class VentasController {
@@ -27,6 +28,11 @@ class VentasController {
         }
 
         $ventas = Venta::paginar($registros_por_pagina, $paginacion->offset());
+        foreach ($ventas as $venta) {
+            $cliente = new Cliente();
+            $datosCliente = $cliente->find($venta->id_cliente);
+            $venta->nombre_cliente = $datosCliente->nombre;
+        }
 
         if(!is_admin()) {
             header('Location: /login');

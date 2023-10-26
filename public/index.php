@@ -9,14 +9,20 @@ use Controllers\CategoriasController;
 use Controllers\ProveedoresController;
 use Controllers\AlmacenesController;
 use Controllers\APIProveedores;
+use Controllers\APIVentas;
+use Controllers\APIClientes;
 use Controllers\PaginasController;
 use Controllers\UsuariosController;
 use Controllers\VentasController;
 use Controllers\TiendasController;
 use Controllers\ClientesController;
 use Controllers\UsersController;
+use Controllers\ReportesController;
 
 $router = new Router();
+
+
+$router->get('/fpdf', [ReportesController::class, 'PruebaV']);
 
 //                      clase       ,        metodo
 // Login
@@ -93,8 +99,11 @@ $router->get('/admin/clientes/editar', [ClientesController::class, 'editar']);
 $router->post('/admin/clientes/editar', [ClientesController::class, 'editar']);
 $router->post('/admin/clientes/eliminar', [ClientesController::class, 'eliminar']);
 
+// API ROUTES
 $router->get('/api/proveedores', [APIProveedores::class, 'index']);
-
+$router->post('/api/ventas/obtener-producto', [APIVentas::class, 'getItemByBarCode']);
+$router->get('/api/clientes/ver-por', [APIClientes::class, 'obtenerClientePorNIT']);
+$router->post('/api/ventas/procesar-venta', [APIVentas::class, 'procesarVenta']);
 
 // Paginas públicas
 

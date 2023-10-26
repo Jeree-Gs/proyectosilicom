@@ -4,3 +4,4 @@ import './agregarValor.js';
 import './tags.js';
 import './slider.js';
 import './popup.js';
+import './ventas.js';

@@ -117,6 +117,15 @@
         }
     }
 
+    &__boton--verde {
+        @include m.boton(#00a33d, v.$blanco);
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        @include m.tablet {
+            width: auto;
+        }
+    }
+
     &__contenedor {
         @include m.shadow;
         background-color: v.$blanco;
