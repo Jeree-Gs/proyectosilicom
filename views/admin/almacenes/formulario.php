@@ -2,7 +2,7 @@
     <legend class="formulario__legend">Información del Producto</legend>
 
     <div class="formulario__campo">
-        <label for="codigoBarra" class="formulario__label">Codigo</label>
+        <label for="codigoBarra" class="formulario__label">Codigo de Barra</label>
         <input 
             type="number" 
             class="formulario__input"
@@ -129,7 +129,7 @@
     <legend class="formulario__legend">Información Extra</legend>
 
     <div class="formulario__campo">
-        <label for="tags_input" class="formulario__label">Marca</label>
+        <label for="tags_input" class="formulario__label">Marca del Producto</label>
         <input 
             type="text" 
             class="formulario__input"
