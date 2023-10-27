@@ -7,7 +7,38 @@
 
 <div class="container">
     <h2>Registro de Ventas</h2>
-    <form>
+    <form> 
+      <div class="two-columns">
+          <div >
+            <label for="datosCliente">Datos del Cliente:</label>
+            <input class="input-venta" type="text" id="datosCliente" name="datosCliente" placeholder="Nit" required>
+          </div>
+          <div class="dashboard__contenedor-boton">
+              <a class="dashboard__boton" href="/admin/clientes/crear">
+                  <i class="fa-solid fa-circle-plus"></i>
+                  Añadir Cliente
+              </a>              
+          </div>
+          </div>
+
+        
+          <div style="display: none" id="nombreClienteBlock">
+            <label for="nombreCliente">Nombre Cliente:</label>
+            <input type="hidden" id="idCliente" name="idCliente">
+            <input class="input-venta" type="text" id="nombreCliente" name="nombreCliente" placeholder="" required disabled>
+          </div>
+          <div style="display: none" id="emailClienteBlock">
+            <label for="emailCliente">Telefono Cliente:</label>
+            <input class="input-venta" type="text" id="emailCliente" name="emailCliente" placeholder="" required disabled>
+            <div class="dashboard__contenedor-boton">
+              <a class="dashboard__boton" id="borrarClienteBtn" style="background-color: red !important">
+                  <i class="fa-solid fa-circle-trash"></i>
+                  Borrar Cliente
+              </a>
+            </div>
+          </div>
+
+          
       <div class="row">
         <div>
           <label for="codigoBarras">Código de Barras:</label>
@@ -42,37 +73,8 @@
             </tbody>
         </table>
 
-        <div class="two-columns">
-          <div>
-            <label for="datosCliente">Datos del Cliente:</label>
-            <input class="input-venta" type="text" id="datosCliente" name="datosCliente" placeholder="Nit" required>
-          </div>
-          <div class="dashboard__contenedor-boton">
-              <a class="dashboard__boton" href="/admin/clientes/crear">
-                  <i class="fa-solid fa-circle-plus"></i>
-                  Añadir Cliente
-              </a>              
-          </div>
-        
-
-        
-          <div style="display: none" id="nombreClienteBlock">
-            <label for="nombreCliente">Nombre Cliente:</label>
-            <input type="hidden" id="idCliente" name="idCliente">
-            <input class="input-venta" type="text" id="nombreCliente" name="nombreCliente" placeholder="" required disabled>
-          </div>
-          <div style="display: none" id="emailClienteBlock">
-            <label for="emailCliente">Telefono Cliente:</label>
-            <input class="input-venta" type="text" id="emailCliente" name="emailCliente" placeholder="" required disabled>
-            <div class="dashboard__contenedor-boton">
-              <a class="dashboard__boton" id="borrarClienteBtn" style="background-color: red !important">
-                  <i class="fa-solid fa-circle-trash"></i>
-                  Borrar Cliente
-              </a>
-            </div>
-          </div>
-        
-
+      <div class="two-columns">
+          
         <div>
           <label for="totalPagar">Total a pagar: (Bs)</label>
           <input class="input-venta" disabled id="totalPagar" name="totalPagar" value="">

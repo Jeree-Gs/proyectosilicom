@@ -1,5 +1,5 @@
 <fieldset class="formulario__fieldset">
-    <legend class="formulario__legend">Información del Proveedores</legend>
+    <legend class="formulario__legend">Información del Cliente</legend>
 
     <div class="formulario__campo">
         <label for="nit" class="formulario__label">Nit</label>
@@ -53,9 +53,8 @@
     </div>
 
     <div class="formulario__campo">
-        <label for="telefono" class="formulario__label">Precio Público</label>
+        <label for="telefono" class="formulario__label" type="hidden">Teléfono</label>
         <input 
-            type="number" 
             class="formulario__input"
             id="telefono"
             name="telefono"

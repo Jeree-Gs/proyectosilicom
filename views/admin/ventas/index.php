@@ -1,9 +1,6 @@
 <h2 class="dashboard__heading"> <?php echo $titulo; ?> </h2>
 
 <div class="dashboard__contenedor-boton">
-    <a class="dashboard__boton--verde" href="../fpdf/PruebaV.php">
-      <i class="fa-solid fa-file-pdf" style="color: #ffffff;"></i>
-    </a>
     <a class="dashboard__boton" href="/admin/ventas/crear">
         <i class="fa-solid fa-circle-plus"></i>
         Registrar Venta
@@ -35,8 +32,18 @@
                 <td class="table__td"><?php echo $venta->created_at; ?></td>
                 <td>
                 <a href="<?php //echo base_url(); ?>Ventas/ver?id=<?php echo $venta->id; ?>&cliente=<?php echo $venta->id_cliente; ?>" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver</a>
+
+                <form method="POST" action="/admin/ventas/eliminar" class="table__formulario">
+                    <input type="hidden" name="id" value="<?php echo $venta->id; ?>">
+                        <button class="table__accion table__accion--eliminar" type="submit">
+                           <i class="fa-solid fa-trash"></i>
+                           Eliminar
+                        </button>
+                 </form>
                 </td>
+                
             </tr>
+            
         <?php } ?>
         </tbody>
     </table>

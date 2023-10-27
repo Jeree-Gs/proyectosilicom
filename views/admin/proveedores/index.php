@@ -38,9 +38,6 @@
                         <td class="table__td">
                             <?php echo $proveedor->nombre; ?>
                         </td>
-                    <!--    <td class="table__td">
-                            <?php echo $proveedor->direccion; ?>
-                        </td> -->
                         <td class="table__td">
                             <?php echo $proveedor->telefono; ?>
                         </td>
